@@ -5,7 +5,7 @@ Settings
 ==========
 
 #### Callbacks
-``
+
     onBeforeLoad: function() {}
         callend before the plugin is loaded - before any method is defined
 
@@ -23,10 +23,10 @@ Settings
 
     onRender: function(ResponseData, Loader) {}
         called before the items are rendered
-``
+
 
 #### Configurable Settings
-``
+
     container: jQuery|CSS [required]
         default: undefined, the container where all the content will be added to
 
@@ -50,16 +50,16 @@ Settings
 
     parser: Function(requestData) {}
         default: jQuery.param, method used for parsing the request data before sending the request - must return data
-``
+
 
 #### Internal Settings
-``
+
     shouldRequest: Boolean
         default: true, if set to false, the plugin will not make a request (can be changed at any time)
 
     shouldRender: Boolean
         default: true, if set to false, the plugin will not render the data with it's default behavior, the onRender callback will still be called and can be used
-``
+
 
 Usage
 ==========
