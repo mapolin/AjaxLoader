@@ -61,6 +61,9 @@ Settings
         default: true, if set to false, the plugin will not render the data with it's default behavior, the onRender callback will still be called and can be used
 ``
 
+Usage
+==========
+
 #### HTML Setup (Example)
     Container to append the new data to:
     <div class="container"></div>
