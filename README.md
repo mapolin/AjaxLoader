@@ -62,27 +62,25 @@ Settings
 ``
 
 #### HTML Setup (Example)
-``
     Container to append the new data to:
-``
-<div class="container"></div>
-``
+    <div class="container"></div>
+
     Template to use for rendering
-``
-<article class="template" data-template-name="template">
-    <div data-template-piece="piece1">
-    </div>
-    <div data-template-piece="piece2">
-    </div>
-    <div data-template-piece="piece3">
-    </div>
-    <div data-template-piece="piece4">
-    </div>
-</article>
+    <article class="template" data-template-name="template">
+        <div data-template-piece="piece1">
+        </div>
+        <div data-template-piece="piece2">
+        </div>
+        <div data-template-piece="piece3">
+        </div>
+        <div data-template-piece="piece4">
+        </div>
+    </article>
 
 #### Javascript Setup
-``
+
     APP.LazyLoader(URL, SETTINGS);
+
     var page = 0;
     var AjaxLoader = new APP.LazyLoader('/request.php', {
             container: '.container',
@@ -100,6 +98,7 @@ Settings
                 }
             }
         });
-``
+        
+
 
 Lazyloader
