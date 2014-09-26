@@ -31,12 +31,15 @@
         // set behavior settings
         this.shouldRequest = true;
         this.shouldRender = true;
+        this.parser = settings.parser || $.param;
         this.delay = settings.delay || 1000;
         this.data = settings.requestData || '';
         this.dataType = settings.requestDataType || 'json';
         this.url = url;
         this.margin = settings.margin || win.height()/2;
         this.restrictScroll = settings.restrictScroll;
+
+        this.onBeforeLoad(this);
 
         // defined default onwheel behavior
         this.wheel = function(event) {
@@ -89,11 +92,11 @@
 
             $.ajax({
                 url: this.url,
-                data: APP.Parse.toString(this.data),
+                data: this.parser(this.data),
                 dataType: this.dataType,
                 success: function(data) {
                     // hook on success of request and render data
-                    _this.onRender(data);
+                    _this.onRender(data, _this);
 
                     // option used to disable default rendering
                     if( _this.shouldRender ) {
@@ -146,6 +149,8 @@
                 _this.wheel(event);
             });
         }
+
+        this.onAfterLoad();
     };
 
 })(jQuery);
